@@ -58,15 +58,15 @@
     font-size: 3rem;
 }
 
-#location {
+#info-location {
     grid-column: 1 / 2;
 }
 
-#hours {
+#info-hours {
     grid-column: 2 / 3;
 }
 
-#hours li {
+#info-hours li {
     font-size: 2rem;
 }
 
