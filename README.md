@@ -1,5 +1,7 @@
 # restaurant
 Restaurant webpage mockup
 
-Purpose: Practice creating the DOM entirely through javascript.
-Not a design exercise.
+Purposes:
+practice creating the DOM entirely through javascript
+famaliarisation with Webpack
+not a design exercise
