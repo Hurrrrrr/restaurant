@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 
-#header {
+.header {
     grid-column: 1 / -1;
     grid-row: 1 / 2;
     background-color: #555555;
@@ -16,30 +16,30 @@
     height: 160px;
 }
 
-#main-banner {
+.main.banner {
     font-size: 6rem;
 }
 
-#main-navbar {
+.main.navbar {
     display: grid;
     grid-template-columns: repeat(3);
     column-gap: 20px;
     font-size: 3rem;
 }
 
-#nav-home {
+.nav.home {
     grid-column: 1 / 2;
 }
 
-#nav-menu {
+.nav.menu {
     grid-column: 2 / 3;
 }
 
-#nav-contact {
+.nav.contact {
     grid-column: 3 / 4;
 }
 
-#main-pic-wrap {
+.main.pic-wrap {
     background: url("./rest-main.jpeg");
     background-repeat: no-repeat;
     grid-column: 1 / -1;
@@ -47,7 +47,11 @@
     width: 100%;
 }
 
-#main-info {
+.main.pic-wrap.menu {
+    background: url("./burger.webp");
+}
+
+.main.info {
     grid-column: 1 / -1;
     grid-row: 3 / 4;
     background-color: #dddddd;
@@ -58,19 +62,19 @@
     font-size: 3rem;
 }
 
-#info-location {
+.info.location {
     grid-column: 1 / 2;
 }
 
-#info-hours {
+.info.hours {
     grid-column: 2 / 3;
 }
 
-#info-hours li {
+li {
     font-size: 2rem;
 }
 
-#main-social {
+.main.social {
     grid-column: 1 / -1;
     grid-row: 4 / 5;
     background-color: aquamarine;
@@ -81,7 +85,7 @@
     align-items: center;
 }
 
-#main-footer {
+.main.footer {
     grid-column: 1 / -1;
     grid-row: 5 / 6;
     background-color: #222222;

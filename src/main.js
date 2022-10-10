@@ -1,30 +1,34 @@
 import mainPic from "./rest-main.jpeg";
 
+const hours = ["Tue-Thu: 10-10", "Fri-Sat: 10-11", "Sun: 11-9", "Mon: Closed"];
+
 // Section rendering functions
 
 function buildHeader() {
         const header = document.createElement('div');
-        header.id = "header";
+        header.classList = "header";
     
         const mainBanner = document.createElement("div");
-        mainBanner.id = "main-banner";
+        mainBanner.classList = "main banner";
         mainBanner.textContent = "COOL";
     
         header.appendChild(mainBanner);
     
         const mainNavbar = document.createElement("div");
-        mainNavbar.id = "main-navbar";
+        mainNavbar.classList = "main navbar";
     
         const navHome = document.createElement("div");
-        navHome.id = "nav-home";
+        navHome.classList = "nav home";
+        navHome.id = "home-button";
         navHome.textContent = "Home";
         
         const navMenu = document.createElement("div");
-        navMenu.id = "nav-menu";
+        navMenu.classList = "nav menu";
+        navMenu.id = "menu-button";
         navMenu.textContent = "Menu";
     
         const navContact = document.createElement("div");
-        navContact.id = "nav-contact";
+        navContact.classList = "nav contact";
         navContact.textContent = "Contact";
     
         mainNavbar.appendChild(navHome);
@@ -38,6 +42,7 @@ function buildHeader() {
 
 function buildMainPic() {
         const mainPicWrap = document.createElement("div");
+        mainPicWrap.classList = "main pic-wrap";
         mainPicWrap.id = "main-pic-wrap";
 
         const myMainPic = new Image();
@@ -49,14 +54,15 @@ function buildMainPic() {
 
 function buildMainInfo() {
         const mainInfo = document.createElement("div");
+        mainInfo.classList = "main info";
         mainInfo.id = "main-info";
 
         const infoLocation = document.createElement("div");
-        infoLocation.id = "info-location";
+        infoLocation.classList = "info location";
         createH2("Location", infoLocation);
 
         const infoHours = document.createElement("div");
-        infoHours.id = "info-hours";
+        infoHours.classList = "info hours";
         createH2("Hours", infoHours);
         buildHoursList(infoHours);
 
@@ -68,7 +74,7 @@ function buildMainInfo() {
 
 function buildSocial() {
         const mainSocial = document.createElement("div");
-        mainSocial.id = "main-social";
+        mainSocial.classList = "main social";
 
         createAnchor("Twitter", "https://twitter.com/", mainSocial);
         createAnchor("Facebook", "https://facebook.com/", mainSocial);
@@ -79,7 +85,7 @@ function buildSocial() {
 
 function buildFooter() {
         const mainFooter = document.createElement("div");
-        mainFooter.id = "main-footer";
+        mainFooter.classList = "main footer";
 
         createP("Built for The Odin Project, 2022", mainFooter);
 
@@ -90,11 +96,9 @@ function buildFooter() {
 
 // Support functions
 
-function buildHoursList(myElement) {
-        const hours = ["Tue-Thu: 10-10", "Fri-Sat: 10-11", "Sun: 11-9", "Mon: Closed"];
-        
+function buildHoursList(myElement) { 
         const hoursList = document.createElement("ul");
-        hoursList.id = "hours-list";
+        hoursList.classList = "hours list";
 
         for (let i = 0; i < hours.length; i++) {
             const li = document.createElement("li");

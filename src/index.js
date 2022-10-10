@@ -1,6 +1,11 @@
 import "./style.css";
 import initWebsite from "./main.js";
-import tabMenu from "./menu.js";
+import buildMenu from "./menu.js";
 
 initWebsite();
-tabMenu();
+initButtons();
+
+function initButtons() {
+    const menuButton = document.getElementById("menu-button");
+    menuButton.addEventListener("click", buildMenu);
+}
